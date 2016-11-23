@@ -98,3 +98,37 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ace49b', end
 .soc .number{
 	font-size: 1.3em;	
 }
+
+.albumcreate{
+	height: 80px;
+	display: block;
+	border-radius: 2px;
+	color: white;
+	font-size: 20px;
+	text-align: center;
+	background-color: #00b26d;
+	vertical-align: center;
+}
+.albumcreate i{
+	margin-top: 10px;
+	font-size: 30px;
+}
+.albmimg{
+	max-height: 50px;
+	margin: 0 auto;
+}
+.albumdesc{
+	margin-bottom: 5px;
+	border-radius: 5px;
+	border:1px solid #ecf0f5;
+
+	overflow: hidden;	
+}
+
+.albumdesc:hover{
+		border:2px solid #00b26d;
+}
+.fixing{
+	margin-right: 0px!important;
+	margin-left: 0px!important;
+}

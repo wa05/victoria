@@ -17,12 +17,14 @@ Route::post('/', 'PagesController@contact');
 
 Route::get('discografia', 'PublicController@discografia');
 
-Route::get('fotos', 'PublicController@fotos');
 
+Route::get('fotos', 'PublicController@fotos');
 
 Route::get('blog/{slug}', ['as' => 'blog.single', 'uses' => 'PublicController@getSingle'])->where('slug', '[\w\d\-\_]+');
 
 Route::get('blog',['as' => 'blog.index', 'uses'=> 'PublicController@getBlog']);
+
+Route::resource('admin/album', 'AlbumController');
 
 Route::resource('admin/blog', 'BlogController');
 

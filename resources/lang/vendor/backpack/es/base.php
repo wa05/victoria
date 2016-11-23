@@ -35,6 +35,7 @@ return [
     'estadisticas'          => 'Estadisticas',
     'categorias'            => 'Categorías',
     'fotos'            => 'Fotos',
+    'album'            => 'Album',
 
 
     'handcrafted_by'       => '',
