@@ -1,7 +1,10 @@
 @extends('welcome')
 
 <!--@section('title', '| Blog')-->
-@yield('styles')
+@section('styles')
+
+	@yield('stylesdos')
+@endsection
 
 @section('content')
 

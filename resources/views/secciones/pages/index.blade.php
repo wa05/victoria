@@ -1,6 +1,5 @@
 @extends('secciones.main')
 
-
 @section('title', "| Blog")
 
 @section('metas')

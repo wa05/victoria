@@ -17,6 +17,8 @@ Route::post('/', 'PagesController@contact');
 
 Route::get('discografia', 'PublicController@discografia');
 
+Route::get('fotos', 'PublicController@fotos');
+
 
 Route::get('blog/{slug}', ['as' => 'blog.single', 'uses' => 'PublicController@getSingle'])->where('slug', '[\w\d\-\_]+');
 

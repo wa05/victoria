@@ -2,7 +2,6 @@
 
 
 .green{
-  height: 100%;
   background-color: #009688;
   padding-top: 30px;
 }
@@ -21,4 +20,7 @@
 }
 .glyphicon{
 font-family: 'Glyphicons Halflings'!important;
+}
+.disco tr{
+	font-size: 16px;
 }

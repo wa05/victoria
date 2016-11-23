@@ -29,7 +29,8 @@
               <li><a href="{{ url(config('backpack.base.route_prefix').'/tags') }}"><i class="fa fa-tags"></i> Tags</a></li>
             </ul>
           </li>
-
+          <li><a href="{{ url(config('backpack.base.route_prefix').'/albums') }}"><i class="fa fa-picture-o"></i> <span>{{ trans('backpack::base.fotos') }}</span></a></li>
+          
           <!-- ======================================= -->
           <li class="header">{{ trans('backpack::base.user') }}</li>
           <li><a href="{{ url(config('backpack.base.route_prefix').'/logout') }}"><i class="fa fa-sign-out"></i> <span>{{ trans('backpack::base.logout') }}</span></a></li>

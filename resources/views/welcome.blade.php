@@ -55,7 +55,7 @@ body {position: relative;padding-left: 35px;padding-right: 35px;}#preloader, #me
       
     <div id="preloader" class="preloader">
       <div class="hojacont">
-      <img src="images/hoja.png" class="ímg-responsive hoja" alt="Hoja Victoria">
+      <img src="{{URL::asset('images/hoja.png')}}" class="ímg-responsive hoja" alt="Hoja Victoria">
       </div>
     </div>
 
@@ -120,6 +120,7 @@ body {position: relative;padding-left: 35px;padding-right: 35px;}#preloader, #me
     <!-- build:js scripts/main.js -->
     <script src="{{ URL::asset('scripts/main.js')}}"></script>
     <!-- endbuild -->
+   
 
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="{{ URL::asset('styles/main.css') }}">

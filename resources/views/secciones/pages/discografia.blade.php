@@ -6,11 +6,11 @@
   <meta name="description" content="Discografia de Victoria Birchner" />
 @endsection
 
-@section('styles')
+@section('stylesdos')
 	<style type="text/css">
 	
 	</style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/4.0.1/ekko-lightbox.min.css" />
+    <link rel="stylesheet" href="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/4.0.1/ekko-lightbox.min.css') }}" />
 @endsection
 
 @section('contentblog')
@@ -29,14 +29,14 @@
                 </div>  
                   <div class="col-xs-12 col-sm-5 col-sm-offset-2 pull-left">
 
-                    <a href="{{ URL::asset('images/cd2big.jpg') }}" data-toggle="lightbox" data-gallery="multiimages" data-title="Memoria del Viento">
+                    <a href="{{ asset('images/cd2big.jpg') }}" data-toggle="lightbox" data-gallery="multiimages" data-title="Memoria del Viento">
                 <img class="cd cda img-responsive" src="{{ URL::asset('images/cd2.jpg') }}  ">
               </a>
 
                     
                   </div>
                   <div class="col-xs-12 col-sm-5 pull-right">
-                    <a href="{{ URL::asset('images/cd1big.jpg') }}" data-toggle="lightbox" data-gallery="multiimages" data-title="Memoria del Viento">
+                    <a href="{{ asset('images/cd1big.jpg') }}" data-toggle="lightbox" data-gallery="multiimages" data-title="Memoria del Viento">
                     <img class="cd img-responsive" src="{{ URL::asset('images/cd1.jpg') }}">
                   </a>
                   </div>
@@ -45,7 +45,7 @@
                     <table class="table">
                       <thead>
                       </thead>
-                      <tbody>
+                      <tbody class="disco">
                         <tr>
                           <td>
                          <b>Memoria del Viento </b>(Franco Luciani / Alejandro Szwarcman) <i><b>Inedito</i> </b>
@@ -175,5 +175,11 @@
 @endsection
 
 @section('scriptsdos')
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/4.0.1/ekko-lightbox.min.js"></script>
+     <script src="{{asset('https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/4.0.1/ekko-lightbox.min.js') }}"></script>
+     <script >
+      $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+          event.preventDefault();
+          $(this).ekkoLightbox();
+      });
+     </script>
 @endsection

@@ -32,4 +32,8 @@ class PublicController extends Controller
     {
         return view('secciones.pages.discografia');
     }
+    public function fotos()
+    {
+        return view('secciones.pages.fotos');
+    }
 }
