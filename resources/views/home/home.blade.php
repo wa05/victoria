@@ -137,7 +137,7 @@ En los meses de abril y mayo del 2013 participó de la grabación del disco “R
                 <img src="{{ asset('images/' . $post->image )}}" class="img-responsive cardimg">
                 </a>
                 
-                        <h3 class="text-center" style="font-weigth:bolder;"> <b> {{ substr(strip_tags($post->title), 0, 105)}} </b> 
+                        <h3 class="text-center notititle" style="font-weigth:bolder;"> <b> {{ substr(strip_tags($post->title), 0, 105)}} </b> 
                 <p class="small">{{ substr(strip_tags($post->subtitle), 0, 195)}}</p> </h3>
                         
                       </div>

@@ -29,7 +29,13 @@
               <li><a href="{{ url(config('backpack.base.route_prefix').'/tags') }}"><i class="fa fa-tags"></i> Tags</a></li>
             </ul>
           </li>
-          <li><a href="{{ url(config('backpack.base.route_prefix').'/album') }}"><i class="fa fa-picture-o"></i> <span>{{ trans('backpack::base.fotos') }}</span></a></li>
+          <li class="treeview">
+            <a href="#"><i class="fa fa-picture-o"></i> <span>Galeria</span></i></a>
+            <ul class="treeview-menu">
+              <li><a href="{{ url(config('backpack.base.route_prefix').'/fotos') }}"><i class="fa fa-newspaper-o"></i> Fotos </a></li>
+              <li><a href="{{ url(config('backpack.base.route_prefix').'/album') }}"><i class="fa fa-book"></i> Albums </a></li>
+            </ul>
+          </li>
           
           <!-- ======================================= -->
           <li class="header">{{ trans('backpack::base.user') }}</li>

@@ -30,7 +30,7 @@
                     </div>
                     <div class="col-md-8">
                     @if (Session::has('success'))
-                           <div class="alert alert-success" role="alert">
+                           <div class="alert alert-success top20" role="alert">
                               <strong>Perfecto!</strong> {{ Session::get('success') }}
                             </div>
 
@@ -61,21 +61,31 @@
                 @foreach ($albums as $album)
                     <div class="col-xs-12 albumdesc">
                       <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-2">
                           <img src="{{ asset('images/' . $album->cover_image )}}" class="albmimg">
                         </div>
                         <div class="col-md-6">
-                          <h2>{{ $album->name }}<small>{{$album->description}}</small></h2>
+                          <h3>{{ $album->name }}<br>
+                            <small>{{$album->description}}</small></h3>
                         </div>
-                        <div class="col-md-2"></div>
+                        <div class="col-md-2">
+                              <h2 class="top20">{{ $album->photos->count() }}<small>fotos</small></h2>
+                        </div>
+                        <div class="col-md-2">
+                            <a href="{{ route('album.show', $album->id) }}" class="btn btn-primary pull-right btn-spacing btn-block">Ver</a>
+                        </div>
                       </div>
 
                     </div>
                 @endforeach
+                <div class="clearfix"></div>
+                    <div class="text-center">
+                    {!! $albums->links(); !!}
+                  </div>
               @else
                 
                   <div class="alert alert-danger centeralert">
-                    <h4>Mil disculpas</h4>
+                    <h4></h4>
                     <p>No se han encontrado Albums</p>
                   </div>
                 

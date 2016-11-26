@@ -24,3 +24,31 @@ font-family: 'Glyphicons Halflings'!important;
 .disco tr{
 	font-size: 16px;
 }
+.notititle:hover{
+	transform: scale(1.1);
+}
+.cardimg:hover{
+	-moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	transform: scale(1.1);
+}
+.albumimg{
+	max-height: 98px;
+	margin: 0 auto;
+}
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img{
+	margin:0 auto;
+}
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus{
+     background-color: #009688;
+   }
+   .pagination li{
+    font-size: 16px;
+   }
+   
+   
+   .pagination > li > a, .pagination > li > span{
+    color: #009688;
+   }

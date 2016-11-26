@@ -11,20 +11,36 @@
 |
 */
 
+/* PUBLIC Routes */
+
 Route::get('/', 'PublicController@welcome');
 
 Route::post('/', 'PagesController@contact');
 
 Route::get('discografia', 'PublicController@discografia');
 
+/*PHOTOS Routes*/
 
 Route::get('fotos', 'PublicController@fotos');
+
+Route::get('fotos/{album_id}', ['as' => 'fotos.singlefoto', 'uses' => 'PublicController@getSingleFoto']);
+
+Route::post('photoupload', 'ImageController@save');
+
+Route::resource('admin/fotos', 'ImageController');
+
+
+Route::resource('admin/album', 'AlbumController');
+
+/*
+Route::get('admin/album/{id}', ['as' => 'album.uploadview', 'uses' => 'ImageController@uploadView']);
+*/
+
+/* BLOG Routes*/
 
 Route::get('blog/{slug}', ['as' => 'blog.single', 'uses' => 'PublicController@getSingle'])->where('slug', '[\w\d\-\_]+');
 
 Route::get('blog',['as' => 'blog.index', 'uses'=> 'PublicController@getBlog']);
-
-Route::resource('admin/album', 'AlbumController');
 
 Route::resource('admin/blog', 'BlogController');
 

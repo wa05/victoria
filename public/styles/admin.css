@@ -116,12 +116,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ace49b', end
 .albmimg{
 	max-height: 50px;
 	margin: 0 auto;
+	margin-top: 15px;
 }
 .albumdesc{
 	margin-bottom: 5px;
 	border-radius: 5px;
 	border:1px solid #ecf0f5;
-
 	overflow: hidden;	
 }
 
@@ -131,4 +131,34 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ace49b', end
 .fixing{
 	margin-right: 0px!important;
 	margin-left: 0px!important;
+}
+.pluss{
+	margin-top: 20px;
+	font-size: 1.5em!important;
+}
+.albumrow{
+	margin-top: 20px;
+}
+
+.imgcontainer{
+	position: relative;
+
+}
+.trash{
+
+	text-align: center;
+	position: absolute;
+	top:0;
+	right: 0px;
+	display: none;
+}
+.trash:hover{
+	cursor: pointer;
+}
+.top20{
+	margin-top: 20px;
+}
+.albumimg{
+	max-height: 98px;
+	margin: 0 auto;
 }

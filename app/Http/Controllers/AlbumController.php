@@ -16,7 +16,7 @@ class AlbumController extends Controller
      */
     public function index()
     {
-        $albums = Album::all();
+        $albums = Album::orderBy('id','desc')->paginate(3);
         return view('admin.albums.index')->withAlbums($albums);
     }
 
@@ -78,7 +78,8 @@ class AlbumController extends Controller
      */
     public function show($id)
     {
-        //
+        $album = Album::find($id);
+        return view('admin.albums.single')->withAlbum($album);
     }
 
     /**
@@ -112,6 +113,11 @@ class AlbumController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $album = Album::find($id);
+        $album->delete();
+
+        Session::flash('success', 'Album Eliminado');
+        return redirect()->route('album.index');
+
     }
 }

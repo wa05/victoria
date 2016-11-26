@@ -15,42 +15,30 @@
 
 @section('contentblog')
     <div class="col-md-9">
-        <h1 class="heading">Fotos de Victoria</h1>
-            
+        <h1 class="heading text-center">Fotos de Victoria <br> <small>Ultimos eventos</small> </h1>
+            <hr>
+            <br>
           <div class="row">
+             @foreach($albums as $album)
+
             <div class="col-md-4 album">
               <div class="card card1">
-                <h2>Voces a la obra, de Juan Falú</h2>
-                <img src="{{ asset('images/DSC_0603.jpg')}}" class="img-responsive cardimg">
-                <p class="small">La nueva generación celebra sus canciones...</p> 
-                <a href="/fotos/vocesalaobra">
-                <button class="btn link" type="button">Ver mas</button>        
+                <a href="{{ route('fotos.singlefoto', $album->id) }}">
+                  <img src="{{ asset('images/'.$album->cover_image) }}" class="img-responsive cardimg">
                 </a>
+                <h4 class="notititle"><b>{{$album->name}}</b><br>
+                  <small>{{$album->description}}</small>
+                </h4>
+
               </div>
             </div>
+            @endforeach
 
-            <div class="col-md-4 album">
-              <div class="card card2">
-                <h2>Centro Cultural El Espiral</h2>
-                <img src="{{ asset('images/8.jpg')}}" class="img-responsive cardimg">
-                <p class="small">Adelanto del disco...</p>
-                <a href="/fotos/elespiral">
-                <button  class="btn link" type="button">Ver mas</button>
-                </a>
-              </div>
-            </div>
-
-            <div class="col-md-4 album">
-              <div class="card card3">
-                <h2>Ciclo de Musica Popular</h2>     
-                <img src="{{ asset('images/9x.jpg')}}" class="img-responsive cardimg">
-                <p class="small">Adelanto del disco junto a Franco Luciani... </p> 
-                <a href="/fotos/ciclomusicapopular">
-                <button class="btn link" type="button">Ver mas</button>        
-                </a>
-              </div>
+            <div class="text-center">
+              {!! $albums->links(); !!}
             </div>
           </div>
+          <hr>
          <ul class="breadcrumb">
           <li><a href="../">Inicio</a></li>
            <li class="active">Fotos</li> 
