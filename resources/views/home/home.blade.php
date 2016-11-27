@@ -2,6 +2,27 @@
 
 <!--@section('title', '| Blog')-->
 
+@section('metas')
+    
+    <meta name="description" content="Victoria Birchner es una joven cantante rafaelina ha sabido ganarse el reconocimiento y el apoyo de grandes referentes del folclore argentino, actualmente presentando 'Memoria del Viento', su primer álbum solista">
+ 
+
+    <meta property="og:title" content="Victoria Birchner" />
+    <meta property="og:url" content="http:://www.vitoriabirchner.com.ar" />
+    <meta property="og:image" content="http://www.victoriabirchner.com.ar/images/portada.jpg" />
+    <meta property="og:description" content="Victoria Birchner" />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@Victoria Birchner" />
+    <meta name="twitter:creator" content="@Victoria Birchner" />
+    <meta name="twitter:title" content="Victoria Birchner" />
+    <meta name="twitter:description" content="Victoria Birchner" />
+    <meta name="twitter:image" content="http://www.victoriabirchner.com.ar/images/portada.jpg" />
+
+    <meta NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+
+@endsection
+
 @section('navleft')
   <nav class="navbar navbar-default">
         <div id="navbar">          

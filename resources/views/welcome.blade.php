@@ -3,7 +3,6 @@
       xmlns:fb="http://ogp.me/ns/fb#">
   <head>
     <meta charset="utf-8">
-    <meta name="description" content="Victoria Birchner es una joven cantante rafaelina ha sabido ganarse el reconocimiento y el apoyo de grandes referentes del folclore argentino, actualmente presentando 'Memoria del Viento', su primer álbum solista">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Victoria Birchner | Inicio</title>
@@ -22,21 +21,8 @@ body {position: relative;padding-left: 35px;padding-right: 35px;}#preloader, #me
   height: 1px;  width: 1px;  margin-top:0px; }.navbar-default .navbar-nav > .active > a > .itemout{  width: 10px;  height: 10px;left: 50%;}ul.nav.navbar-nav {    margin-top: 30vh;}.glyphicon{  }.ulder{      position: absolute;    bottom: 50px;    width: 36px;    -webkit-transform: translateY(-10%);    -moz-transform: translateY(-10%);    -o-transform: translateY(-10%);    -ms-transform: translateY(-10%);    transform: translateY(-10%);}#barrader{  position: fixed;  height: 60vh;  top:0;  width: 29px;  right: 0;  background-color: white;  z-index: 5;  display: block;}#barrader ul{  list-style: none;  color: black;}.redes{  position: absolute;  bottom: 0;  padding-left: 6px;  margin-top: 30vh;}.accesos{  margin-bottom: 20px;}.accesos:hover{  opacity: 0.7;}#parallax1{  background: url(../images/portadax.jpg) fixed;   height: 300px;   position: relative;  margin: 0 auto;  padding: 5%;  background-size: cover; }</style>    
     
 
-    <meta property="og:title" content="Victoria Birchner" />
-    <meta property="og:url" content="http:://www.vitoriabirchner.com.ar" />
-    <meta property="og:image" content="http://www.victoriabirchner.com.ar/images/portada.jpg" />
-    <meta property="og:description" content="Victoria Birchner" />
-    
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@Victoria Birchner" />
-    <meta name="twitter:creator" content="@Victoria Birchner" />
-    <meta name="twitter:title" content="Victoria Birchner" />
-    <meta name="twitter:description" content="Victoria Birchner" />
-    <meta name="twitter:image" content="http://www.victoriabirchner.com.ar/images/portada.jpg" />
-
-    <meta NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
-
-    <meta name="author" content="Victoria Birchner Cantante Folklore">
+    <meta name="author" content="Victoria Birchner">
+    @yield('metas')
     @yield('styles')
   </head>
 

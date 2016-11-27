@@ -13,7 +13,7 @@
 @section('header')
     <section class="content-header">
       <h1>
-        Crear Album
+        Editar Album
       </h1>
       <ol class="breadcrumb">
         <li><a href="{{ url(config('backpack.base.route_prefix')) }}">{{ config('backpack.base.project_name') }}</a></li>
@@ -37,20 +37,31 @@
                 </div>
                 <div class="box-body">
                   
-    {!! Form::open(array('route' => 'album.store', 'data-parsley-validate' => '', 'files' => true)) !!}
-
-        {{ Form::label('name', 'Nombre Album *') }}
+    {!! Form::model($album, ['route' => ['album.update', $album->id], 'method' => 'PUT', 'files'=> true ]) !!}
+    
+        {{ Form::label('name', 'Actualizar Nombre Album *') }}
         {{ Form::text('name',null, array('class' => 'form-control', 'required' => '', 'maxlength' =>'255', 'placeholder' => 'Nombre del Album')) }}
 
-        {{ Form::label('description','Descripcion', ['class'=>'btn-h1-spacing'] ) }}
+        {{ Form::label('description','Actualizar Descripcion', ['class'=>'btn-h1-spacing'] ) }}
         {{ Form::text('description',null, array('class' => 'form-control','maxlength' =>'255', 'placeholder' => 'Descripcion')) }}
         
 
-        {{ Form::label('cover_image','Imagen portada', ['class'=>'btn-h1-spacing'] ) }}
-        {{ Form::file('cover_image') }}
+        {{ Form::label('cover_image','Actualizar portada', ['class'=>'btn-h1-spacing'] ) }}
+        {{ Form::file('cover_image', array('class'=>'required')) }}
 
-        {{ Form::submit('Crear Album', array('class' => 'btn btn-success btn-lg btn-block', 'style' => 'margin-top:20px;') ) }}
-    {!! Form::close() !!}
+        <div class="row">
+            <div class="col-sm-6">
+                {!! HTML::linkRoute('album.show','Cancelar', array($album->id), array('class'=>'btn btn-danger btn-block top20')) !!}
+                
+                </div>
+
+                <div class="col-sm-6">
+                  {{ Form::submit('Guardar',['class'=>'btn btn-success btn-block top20']) }}
+                </div>
+
+          </div>
+
+       {!! Form::close() !!}
 
                 </div>
               </div>

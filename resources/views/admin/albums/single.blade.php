@@ -29,7 +29,10 @@
                         <h3><b>{{ $album->name }}</b><br>
                             <small>{{$album->description}}</small></h3>
                     </div>
-                    <div class="col-md-3"></div>
+                    <div class="col-md-3">
+                       {!! HTML::linkRoute('album.edit','Editar', array($album->id), array('class'=>'btn btn-primary btn-block top20')) !!}
+                        
+                    </div>
                     <div class="col-md-3">
                         {!! Form::open(['route' => ['album.destroy', $album->id], 'method' => 'DELETE']) !!}
                                     {{ Form::button('Borrar Album', array('class'=>'btn btn-block btn-danger top20', 'type'=>'submit')) }}

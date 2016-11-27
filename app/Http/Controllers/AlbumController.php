@@ -90,7 +90,8 @@ class AlbumController extends Controller
      */
     public function edit($id)
     {
-        //
+        $album = Album::find($id);
+        return view('admin.albums.edit')->withAlbum($album);
     }
 
     /**
@@ -101,8 +102,50 @@ class AlbumController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {
-        //
+    {   
+        $album = Album::find($id);
+
+         $this->validate($request, array(
+                'name'         => 'required|max:255',
+                'description'      => 'max:255',
+                'image' => 'required'               
+            ));
+
+        
+        //store in the DB
+        $album = new Album;
+        $album->name = $request->name;
+        $album->description = $request->description;
+
+        //save our image
+        if($request->hasFile('cover_image')){
+            $image = $request->file('cover_image');
+            $filename = time() . '.' . $image->getClientOriginalExtension();
+            $location = public_path('images/' . $filename);
+
+            Image::make($image)->resize(null, 400, function ($constraint) {
+                $constraint->aspectRatio();
+            })->save($location);
+
+            $oldfilename = $album->image;
+
+            $album->image = $filename;
+
+            Storage::delete($oldfilename);
+
+
+            $album->cover_image = $filename;
+        }
+        else{
+
+        }
+        $album->save();
+
+        //redirect to another page
+        Session::flash('success', 'El album fue actualizado exitosamente!');
+
+        return redirect()->route('album.index');
+        
     }
 
     /**
